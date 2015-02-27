@@ -1,8 +1,4 @@
-/////////////////////////////////////////////////////////////
-// README
-/////////////////////////////////////////////////////////////
-
-kick ass gui is a GUI front end for SolidAngle's amazing Arnold Renderer. http://www.solidangle.com for more info.
+Kick Ass GUI is a GUI front end for SolidAngle's amazing Arnold Renderer. http://www.solidangle.com for more info.
 FYI, this application is mostly useless unless you have Arnold.
 
 Proper readme coming soon :)
