@@ -1,0 +1,6 @@
+// Sign the app.
+codesign -f -s "3rd Party Mac Developer Application: Gene Crucean" KickAssGUI.app
+//codesign -f -s "3rd Party Mac Developer Installer: Gene Crucean" KickAssGUI.app
+
+// Build a .pkg for app submission.
+productbuild --component KickAssGUI.app /Applications --sign "3rd Party Mac Developer Installer: Gene Crucean" KickAssGUI.pkg

@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/widgets">
+        <file>images/down_arrow.png</file>
+        <file>images/checkbox.png</file>
+        <file>images/comboBoxDownArrow_16px.png</file>
+        <file>images/comboBoxDownArrow_32px.png</file>
+        <file>images/handle.png</file>
+        <file>images/checkbox_orange.png</file>
+        <file>images/splitter_horizontal.png</file>
+        <file>images/splitter_vertical.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>images/KickAssGUI.png</file>
+        <file>images/KickAssGUI.icns</file>
+    </qresource>
+    <qresource prefix="/style">
+        <file>DarkStyle.css</file>
+    </qresource>
+</RCC>

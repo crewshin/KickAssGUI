@@ -1,0 +1,2 @@
+Line 495
+Working on -o and -of. Why wont image output work?

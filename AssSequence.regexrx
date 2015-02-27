@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RegExRX_Document xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.00">
+  <Control name="fldSearch" encoding="hex">
+    <value>5C62285C647B347D295C62</value>
+  </Control>
+  <Control name="fldReplace" encoding="hex">
+    <value>5B24265D</value>
+  </Control>
+  <Control name="fldSource" encoding="hex">
+    <value>4265617574795F4D61696E2E303030312E6173730A4265617574795F4D61696E2E303030322E6173730A4265617574795F4D61696E2E303030332E6173730A4265617574795F4D61696E2E303030342E6173730A4265617574795F4D61696E2E303030352E6173730A4265617574795F4D61696E322E303030312E6173730A4265617574795F4D61696E322E303030322E6173730A4265617574795F4D61696E322E303030332E6173730A4265617574795F4D61696E322E303030342E6173730A4265617574795F4D61696E322E303030352E6173730A4265617574795F6D61696E2D763030312E303030312E6173730A4265617574795F6D61696E2D763030312E303030322E6173730A4265617574795F6D61696E2D763030312E303030332E6173730A4265617574795F6D61696E2D763030312E303030342E6173730A4265617574795F6D61696E2D763030312E303030352E617373</value>
+  </Control>
+  <Preference name="Do Replace" value="true"/>
+  <OptionMenu text="Case Sensitive" index="0" checked="false"/>
+  <OptionMenu text="Dot Matches Newline" index="1" checked="false"/>
+  <OptionMenu text="Greedy" index="2" checked="true"/>
+  <OptionMenu text="Allow Empty Matches" index="3" checked="true"/>
+  <OptionMenu text="String Begin Is Line Begin" index="4" checked="true"/>
+  <OptionMenu text="String End Is Line End" index="5" checked="true"/>
+  <OptionMenu text="Treat Target As One Line" index="6" checked="false"/>
+  <LineEndType value="4"/>
+  <Window Title="AssSequence">
+    <Left value="878"/>
+    <Top value="292"/>
+    <Width value="735"/>
+    <Height value="925"/>
+  </Window>
+</RegExRX_Document>

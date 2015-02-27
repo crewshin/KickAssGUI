@@ -1,0 +1,28 @@
+//////////////////////////////////////////
+// 0.3
+//////////////////////////////////////////
+Fixes:
+- Fixed Open and Save dialog's.
+
+
+
+//////////////////////////////////////////
+// 0.2
+//////////////////////////////////////////
+New features:
+- Added Diffuse and Glossy samples.
+- Added all raytracing options.
+- Added all gamma options.
+- Added disable progressive rendering.
+- Added output image file path (Note the file type on the right of the text field doesn't work… which makes the whole output image not work. I'll fix this in the next release).
+- Restructured the interface a bit.
+
+Fixed bugs:
+- Lots ;)
+
+
+
+//////////////////////////////////////////
+// 0.1
+//////////////////////////////////////////
+This is the initial release. It's functional but has a lot of features not implemented yet.

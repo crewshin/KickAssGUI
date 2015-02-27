@@ -1,0 +1,9 @@
+/////////////////////////////////////////////////////////////
+// README
+/////////////////////////////////////////////////////////////
+
+kick ass gui is an osx GUI front end for the Arnold Renderer. http://www.solidangle.com for more info.
+FYI, this application is mostly useless unless you have Arnold for OSX.
+
+- kickassgui/kick --help.txt is a dump of kick's help file.
+- kickassgui/CommandsToImplement.txt is a list of initial commands to implement.
