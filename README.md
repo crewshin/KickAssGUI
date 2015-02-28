@@ -7,5 +7,5 @@ v2.1.0
 ![kickassgui_v2 1 0](https://cloud.githubusercontent.com/assets/273809/6423323/26cf1066-be99-11e4-9d37-0cb72dee6664.png)
 
 YouTube Intro:
-[![ScreenShot](https://cloud.githubusercontent.com/assets/273809/6423375/185bd996-be9a-11e4-9b31-cae780a30196.png)](http://youtu.be/3okAcBK6wXU)
+[![ScreenShot](https://cloud.githubusercontent.com/assets/273809/6423420/a363de08-be9a-11e4-8e26-93b334e3fcd4.png)](http://youtu.be/3okAcBK6wXU)
 
