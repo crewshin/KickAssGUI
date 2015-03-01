@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>523</width>
-    <height>139</height>
+    <height>170</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -503,34 +503,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QLabel" name="prefsShadersPathLabel">
-       <property name="text">
-        <string>Path to shaders:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="prefsBrowseKickButton">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Browse</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="prefsKickPathLineEdit"/>
+      <widget class="QLineEdit" name="prefsKickPathLineEdit">
+       <property name="placeholderText">
+        <string>/Path/To/Kick</string>
+       </property>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="prefsKickPathLabel">
@@ -559,7 +537,70 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="prefsShadersPathLineEdit"/>
+      <widget class="QLineEdit" name="prefsShadersPathLineEdit">
+       <property name="placeholderText">
+        <string>/Path/To/Shaders</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="prefsShadersPathLabel">
+       <property name="text">
+        <string>Path to shaders:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="prefsBrowseKickButton">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="prefsShadersPathLineEdit_2">
+       <property name="placeholderText">
+        <string>License Host (5053@IP_Address)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="prefsShadersPathLabel_2">
+       <property name="text">
+        <string>License Host:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="prefsShadersBrowseButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

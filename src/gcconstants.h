@@ -3,7 +3,8 @@
 
 #endif // GCCONSTANTS_H
 
-#define kVersionNumber "Kick Ass GUI v2.1.0"
+#define kVersionNumber "2.1.1"
+#define kVersion "Kick Ass GUI v2.1.1"
 
 #define LOG1 true
 #define LOG2 true
@@ -11,6 +12,9 @@
 #define LOG4 true
 #define LOG5 true
 
+#define kKickPath "kickPath"
+#define kShaderPath "shaderPath"
+#define kLastUsedDirCheckBox "lastUsedDirCheckBox"
 
 #define kLastUsedDirCheckBox "lastUsedDirCheckBox"
 #define kLastUsedDir "lastUsedDir"

@@ -1,9 +1,7 @@
 #include "preferences.h"
 #include "ui_preferences.h"
+#include "gcconstants.h"
 
-#define kKickPath "kickPath"
-#define kShaderPath "shaderPath"
-#define kLastUsedDirCheckBox "lastUsedDirCheckBox"
 
 Preferences::Preferences(QWidget *parent) : QDialog(parent), ui(new Ui::Preferences)
 {
@@ -13,8 +11,8 @@ Preferences::Preferences(QWidget *parent) : QDialog(parent), ui(new Ui::Preferen
     QCoreApplication::setOrganizationName("GeneCrucean");
     QCoreApplication::setOrganizationDomain("genecrucean.com");
     QCoreApplication::setApplicationName("KickAssGUI");
-    QCoreApplication::setApplicationVersion("2.0.1");
-    QSettings settings(QSettings::NativeFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QCoreApplication::setApplicationVersion(kVersionNumber);
+    QSettings settings(QSettings::NativeFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     this->readSettings();
 }
@@ -30,7 +28,7 @@ void Preferences::writeSettings()
 //    qDebug() << "Preferences::writeSettings";
     
     // Save user prefs for later use.
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     settings.beginGroup("prefs");
     settings.setValue(kKickPath, ui->prefsKickPathLineEdit->text());
@@ -46,7 +44,7 @@ void Preferences::readSettings()
 //    qDebug() << "Preferences::readSettings";
     
     // Setup interface using user specified settings.
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     qDebug() << settings.value(kKickPath, "");
     

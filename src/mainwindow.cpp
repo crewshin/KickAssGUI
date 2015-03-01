@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     isSequence = false;
     
     // Set version number.
-    ui->mainTabVersionLabel->setText(kVersionNumber);
+    ui->mainTabVersionLabel->setText(kVersion);
     
     // Init the kick process.
     kickProcess = new QProcess(this);
@@ -127,7 +127,7 @@ bool MainWindow::launchKick()
     qDebug() << args;
     qDebug() << "/////////////////// end args //////////////////////";
     
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     // Get path to kick.
     QString program = settings.value("prefs/kickPath", "").toString();
@@ -155,7 +155,7 @@ void MainWindow::on_mainTabInputAssBrowseButton_clicked()
 {
     qDebug() << "on_mainTabAssBrowseButton_clicked";
     
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     // Get folder from last used ass files and set new launch default folder.
     settings.beginGroup("prefs");
@@ -324,11 +324,15 @@ void MainWindow::on_mainTabRenderButton_clicked()
         ui->mainTabRenderOutputPlainTextEdit->clear();
     }
     
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
+    settings.beginGroup("prefs");
+    QString kickPathLength = settings.value(kKickPath).toString();
+//    qDebug() << "|||||||||||||||| " << kickPathLength.length();
+    
     
     if (ui->mainTabInputAssListWidget->count() > 0)
     {
-        if (settings.value("kickPath") != "")
+        if (kickPathLength.length() > 0)
         {
             qDebug() << "Kick path is set... carry on.";
             
@@ -372,6 +376,8 @@ void MainWindow::on_mainTabRenderButton_clicked()
         alert.setMinimumSize(500, 200);
         alert.exec();
     }
+    
+    settings.endGroup();
 }
 
 void MainWindow::on_mainTabSaveUIButton_clicked()
@@ -385,7 +391,7 @@ void MainWindow::on_mainTabResetUIButton_clicked()
 {
     qDebug() << "on_mainTabResetUIButton_clicked";
     
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_UI");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_UI");
     
     settings.remove("renderOptions");
     settings.remove("raytracing");
@@ -517,7 +523,7 @@ void MainWindow::writeSettings()
     qDebug() << "AssViewerPreferences::writeSettings";
 
     // Save user prefs for later use.
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_UI");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_UI");
     
     settings.beginGroup("mainWindow");
     settings.setValue(kClearOnRender, ui->mainClearOnRenderCheckBox->isChecked());
@@ -634,7 +640,7 @@ void MainWindow::readSettings()
     qDebug() << "AssViewerPreferences::readSettings";
 
     // Save user prefs for later use.
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_UI");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_UI");
     
     settings.beginGroup("mainWindow");
     ui->mainClearOnRenderCheckBox->setChecked(settings.value(kClearOnRender, true).toBool());
@@ -747,7 +753,7 @@ void MainWindow::buildArguments()
 {
     qDebug() << "buildArguments";
     
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "GeneCrucean", "KickAssGUI_PREFS");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
     
     arguments.clear();
     
