@@ -9,3 +9,10 @@ v2.1.0
 YouTube Intro:
 [![ScreenShot](https://cloud.githubusercontent.com/assets/273809/6423420/a363de08-be9a-11e4-8e26-93b334e3fcd4.png)](http://youtu.be/3okAcBK6wXU)
 
+### How to build
+
+1: [Install Qt5](http://www.qt.io/download-open-source)
+2: Open src/KickAssGUI.pro
+3: Ctrl/Command + r
+
+Enjoy :)
