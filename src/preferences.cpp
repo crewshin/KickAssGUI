@@ -33,6 +33,7 @@ void Preferences::writeSettings()
     settings.beginGroup("prefs");
     settings.setValue(kKickPath, ui->prefsKickPathLineEdit->text());
     settings.setValue(kShaderPath, ui->prefsShadersPathLineEdit->text());
+    settings.setValue(kIgnoreLicHostCheckBox, ui->prefsIgnoreLicHostCheckBox->isChecked());
     settings.setValue(kLastUsedDirCheckBox, ui->prefsLastUsedDirCheckBox->isChecked());
     settings.endGroup();
     
@@ -51,6 +52,7 @@ void Preferences::readSettings()
     settings.beginGroup("prefs");
     ui->prefsKickPathLineEdit->setText(settings.value(kKickPath, "").toString());
     ui->prefsShadersPathLineEdit->setText(settings.value(kShaderPath, "").toString());
+    ui->prefsIgnoreLicHostCheckBox->setChecked(settings.value(kIgnoreLicHostCheckBox, false).toBool());
     ui->prefsLastUsedDirCheckBox->setChecked(settings.value(kLastUsedDirCheckBox, true).toBool());
     settings.endGroup();
 }
@@ -71,6 +73,13 @@ void Preferences::on_prefsBrowseKickButton_clicked()
     
     // Add path to GUI.
     ui->prefsKickPathLineEdit->setText(path);
+    
+    // Temporarily copy kick path to shader path.
+    QFile file(path);
+    QString tmp = file.fileName();
+    tmp.remove(QRegularExpression("[kK]ick.?e?x?e?"));
+    qDebug() << "##############: " << tmp;
+    ui->prefsShadersPathLineEdit->setText(tmp);
 }
 
 void Preferences::on_prefsShadersBrowseButton_clicked()
@@ -80,3 +89,15 @@ void Preferences::on_prefsShadersBrowseButton_clicked()
     // Add path to GUI.
     ui->prefsShadersPathLineEdit->setText(path);
 }
+
+
+
+
+
+
+
+
+
+
+
+

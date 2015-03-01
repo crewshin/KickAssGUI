@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>523</width>
-    <height>170</height>
+    <height>155</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -569,40 +569,14 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="prefsShadersPathLineEdit_2">
-       <property name="placeholderText">
-        <string>License Host (5053@IP_Address)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="prefsShadersPathLabel_2">
-       <property name="text">
-        <string>License Host:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QPushButton" name="prefsShadersBrowseButton_2">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Browse</string>
-       </property>
-      </widget>
-     </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="prefsIgnoreLicHostCheckBox">
+     <property name="text">
+      <string>Ignore license host?</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QCheckBox" name="prefsLastUsedDirCheckBox">

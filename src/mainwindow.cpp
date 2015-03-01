@@ -3,6 +3,8 @@
 #include "gcconstants.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <QtGlobal>
+#include <QFileInfo>
 
 // OS is OSX.
 #ifdef Q_OS_MAC
@@ -19,14 +21,51 @@
 #define osType "WIN"
 #endif
 
+bool fileExists(QString path) {
+//    QFileInfo checkFile(path);
+//    // check if file exists and if yes: Is it really a file and no directory?
+//    if (checkFile.exists() && checkFile.isFile()) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+    
+    QFileInfo file(path);
+    if (file.isFile())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+    qDebug() << "HOME: " << QDir::homePath();
+}
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     
+    // Check if user prefs have been set.
+    QString prefsFile = QDir::homePath();
+    prefsFile.append("/.config/KickAssGUI/KickAssGUI_PREFS.ini");
+    qDebug() << "prefsFile: " << prefsFile;
+    
+    if (!fileExists(prefsFile))
+    {
+        qDebug() << "BOOM";
+        Preferences myPrefs;
+        myPrefs.setModal(true);
+        myPrefs.exec();
+    }
+
+    
     // Read settings.
     this->readSettings();
             
-    qDebug() << "solidangle_LICENSE: " << qgetenv("solidangle_LICENSE");
+    QString lic = qgetenv("solidangle_LICENSE");
+    qDebug() << "solidangle_LICENSE: " << lic;
     
     // Set icon.
     MainWindow::setWindowIcon(QIcon(":/icon/images/KickAssGUI.png"));
@@ -1013,6 +1052,18 @@ void MainWindow::buildArguments()
     if (ui->mainTabDisableProgressiveRenderCheckBox->isChecked())
     {
         arguments.append("-dp");
+    }
+    
+    
+//    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
+//    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "KickAssGUI", "KickAssGUI_PREFS");
+    settings.beginGroup("prefs");
+    bool tmpCheck = settings.value(kIgnoreLicHostCheckBox, false).toBool();
+    settings.endGroup();
+    
+    if (tmpCheck) 
+    {
+        arguments.append("-sl");
     }
     
     qDebug() << "++++++++++ arguments: " << arguments;

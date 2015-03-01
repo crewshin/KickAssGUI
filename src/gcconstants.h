@@ -17,6 +17,7 @@
 #define kLastUsedDirCheckBox "lastUsedDirCheckBox"
 
 #define kLastUsedDirCheckBox "lastUsedDirCheckBox"
+#define kIgnoreLicHostCheckBox "prefsIgnoreLicHostCheckBox"
 #define kLastUsedDir "lastUsedDir"
 #define kSequence "sequence"
 #define kDisableOutputWindow "disableOutputWindow"
