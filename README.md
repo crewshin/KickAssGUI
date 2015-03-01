@@ -12,7 +12,9 @@ YouTube Intro:
 ### How to build
 
 1: [Install Qt5](http://www.qt.io/download-open-source)
+
 2: Open src/KickAssGUI.pro
+
 3: Ctrl/Command + r
 
 Enjoy :)
