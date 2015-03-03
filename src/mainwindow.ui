@@ -660,7 +660,7 @@ QMessageBox {
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>250</width>
+            <width>305</width>
             <height>20</height>
            </size>
           </property>
