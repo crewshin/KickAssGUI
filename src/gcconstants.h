@@ -3,8 +3,8 @@
 
 #endif // GCCONSTANTS_H
 
-#define kVersionNumber "2.1.1"
-#define kVersion "Kick Ass GUI v2.1.1"
+#define kVersionNumber "2.1.2"
+#define kVersion "Kick Ass GUI v2.1.2"
 
 #define LOG1 true
 #define LOG2 true
