@@ -832,7 +832,7 @@ QMessageBox {
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>310</height>
+         <height>300</height>
         </size>
        </property>
        <property name="title">
