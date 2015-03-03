@@ -633,72 +633,10 @@ QMessageBox {
           </property>
          </spacer>
         </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="mainTabInputAssRemoveItemButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>125</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>125</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="statusTip">
-           <string>Removes the selected entry from the list.</string>
-          </property>
-          <property name="text">
-           <string>Remove selection</string>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="mainTabInputAssLabel">
           <property name="text">
            <string>Input .ass files:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="7">
-         <widget class="QPushButton" name="mainTabInputAssClearButton">
-          <property name="minimumSize">
-           <size>
-            <width>75</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>20</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Ctrl Command C</string>
-          </property>
-          <property name="statusTip">
-           <string>Clears the list of input .ass files.</string>
-          </property>
-          <property name="text">
-           <string>Clear list</string>
-          </property>
-          <property name="shortcut">
-           <string>Meta+Ctrl+C</string>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -803,8 +741,76 @@ QMessageBox {
         </item>
         <item row="0" column="7">
          <widget class="QLabel" name="label_2">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
           <property name="text">
            <string>Seq length: </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="mainTabInputAssClearButton">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Ctrl Command C</string>
+          </property>
+          <property name="statusTip">
+           <string>Clears the list of input .ass files.</string>
+          </property>
+          <property name="text">
+           <string>Clear list</string>
+          </property>
+          <property name="shortcut">
+           <string>Meta+Ctrl+C</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="7">
+         <widget class="QPushButton" name="mainTabInputAssRemoveItemButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>125</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="statusTip">
+           <string>Removes the selected entry from the list.</string>
+          </property>
+          <property name="text">
+           <string>Remove selection</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
